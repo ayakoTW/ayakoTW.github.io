@@ -1,5 +1,11 @@
-var vocab = "Hello World";
-document.write(vocab);
+var sum = 0;
+function calculation(num) {
+    for (var q = 1; q < 100; q++) {
+        num = num + q;
+    }
+    return num;
+}
 
-// Log to console
-console.log(vocab);
+sum = calculation(sum);
+document.write(sum);
+console.log(sum);
