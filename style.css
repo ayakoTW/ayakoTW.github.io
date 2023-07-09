@@ -1,12 +1,118 @@
 body {
-    background: transparent;
-    /* Make it white if you need */
-    color: hsl(0, 0%, 0%);
-    padding: 0 24px;
-    margin: 0;
-    height: 100vh;
+    font-family: 'Microsoft JhengHei', "helvetica neue", arial, sans-serif;
+}
+
+/*============ cards ============*/
+
+/** {
+    border: 1px solid;
+}*/
+
+/* container (puts all of the elements) */
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.header {
+    background-color: rgb(255, 214, 221);
+}
+
+/* a row (where cols are put in) */
+.row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-wrap: wrap;
+}
+
+/* a colume (where cards are put in) */
+.col {
+    width: calc(100%/3);
+    padding: 5px;
+}
+
+@media (max-width: 576px) {
+    .col {
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 32px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 990px) {
+    .col {
+        width: 50%;
+    }
+
+    .card-title {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+/* a card */
+.card {
+    background-color: rgb(247, 202, 247);
+    /* border-radius區塊圓角: ; */
+    border-radius: 10px;
+    /* overflow溢出處理: ; */
+    overflow: hidden;
+    /* box-shadow區塊陰影: x y blur color; */
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
+    opacity: .8;
+    transition: all .6s ease;
+    transform: scale(1);
+}
+
+.card:hover {
+    box-shadow: 0px 10px 17px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.card:hover h3 {
+    color: brown;
+    font-size: larger;
+}
+
+/* card image */
+.card-img {
+    width: 100%;
+    display: block;
+}
+
+.card-waffleimg {
+    width: 100%;
+    padding: 10px;
+    display: block;
+}
+
+/* card body */
+.card-body {
+    padding: 10px 10px;
+}
+
+/* card title */
+.card-title {
+    margin-top: 0px;
+}
+
+/* card text */
+.card-text {
+    margin-bottom: 0px;
+}
+
+/* card badge */
+.badge {
+    background: rgb(255, 120, 97);
+    color: white;
+    padding: 0px 6px;
+    border-radius: 3px;
+}
+
+.text-center {
+    text-align: center;
 }
